@@ -21,8 +21,12 @@ public class MyLinearLayout extends LinearLayout {
         int sizeWidth = MeasureSpec.getSize(widthMeasureSpec);
         int sizeHeight = MeasureSpec.getSize(heightMeasureSpec);
 
-        Log.d("test", "LinearLayout orientation=" +  getOrientation() + ", wMode: " + Utils.getMeasureSpecMode(withMode) + " hMode:" + Utils.getMeasureSpecMode(heightMode)
-                + " w=" + sizeWidth + ", h=" + sizeHeight);
+        int orientation = getOrientation();
+        String str = orientation == 1 ? "Vertical" : "Horizontal";
+        if(orientation == VERTICAL)
+            Log.d("test", Utils.StringFormat("  > MyLinearLayout " + str, sizeWidth, Utils.getMeasureSpecMode(withMode) , sizeHeight, Utils.getMeasureSpecMode(heightMode) ));
+        else
+            Log.d("test", Utils.StringFormat("> MyLinearLayout " + str, sizeWidth, Utils.getMeasureSpecMode(withMode), sizeHeight, Utils.getMeasureSpecMode(heightMode)));
 
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 

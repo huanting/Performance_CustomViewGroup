@@ -21,9 +21,7 @@ public class MyMenu extends ImageView {
         int sizeWidth = MeasureSpec.getSize(widthMeasureSpec);
         int sizeHeight = MeasureSpec.getSize(heightMeasureSpec);
 
-        Log.d("test", "MyMenu wMode: " + Utils.getMeasureSpecMode(withMode) + " hMode:" + Utils.getMeasureSpecMode(heightMode)
-                + " w=" + sizeWidth + ", h=" + sizeHeight);
-
+        Log.d("test", Utils.StringFormat("  > MyMenu", sizeWidth, Utils.getMeasureSpecMode(withMode) , sizeHeight, Utils.getMeasureSpecMode(heightMode) ));
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 
 

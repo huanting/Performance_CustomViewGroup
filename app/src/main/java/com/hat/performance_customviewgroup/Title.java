@@ -22,9 +22,7 @@ public class Title extends TextView {
         int sizeWidth = MeasureSpec.getSize(widthMeasureSpec);
         int sizeHeight = MeasureSpec.getSize(heightMeasureSpec);
 
-        Log.d("test", "Title wMode: " + Utils.getMeasureSpecMode(withMode) + " hMode:" + Utils.getMeasureSpecMode(heightMode)
-                + " w=" + sizeWidth + ", h=" + sizeHeight);
-
+        Log.d("test", Utils.StringFormat("      > Title", sizeWidth, Utils.getMeasureSpecMode(withMode) , sizeHeight, Utils.getMeasureSpecMode(heightMode) ));
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 
     }

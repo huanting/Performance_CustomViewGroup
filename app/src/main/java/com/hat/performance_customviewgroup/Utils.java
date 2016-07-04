@@ -16,4 +16,9 @@ public class Utils {
         else
             return "at_most";
     }
+
+    public static String StringFormat(String name, int w,  String wMode, int h, String hMode )
+    {
+        return String.format("%-30s [w: %-10d %-15s h: %-10d %-15s ]", name, w, wMode, h, hMode);
+    }
 }
